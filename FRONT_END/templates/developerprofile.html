@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block head%} 
+<title>Profile</title>
+{% endblock%}
+
+{% block body%}
+
+<div>
+  <h4>Username: {{input_uname}}</h4>
+  <h4>Name: {{input_name}}</h4>
+  <h4>EmailID: {{input_emailid}}</h4>
+</div>
+
+
+
+<div>
+  
+  <form class="form" method="post" action='/editprofile'>
+    <input type="text" id="n_name" name="n_name" placeholder="New Name"><br>
+    <input type="text" id="n_emailid" name="n_emailid" placeholder="New Email Id. No Spaces"><br>
+    <input type="text" id="n_username" name="n_username" placeholder="New Username. No spaces"><br>
+    <input type="text" id="n_password" name="n_password" placeholder="New Password. Atleast 10 Characters "><br>
+    <input type="submit" value="Edit Profile">
+  </form>
+</div>
+{%endblock%}

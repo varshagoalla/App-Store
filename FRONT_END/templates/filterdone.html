@@ -1,0 +1,16 @@
+
+{%extends 'base.html'%}
+{%block head%} 
+<title>Homes</title>
+{% endblock%}
+
+{% block body%}
+<a href='/filter' style="text-decoration:none">CHANGE FILTER AND SORT OPTIONS </a><br>
+<a href='/userhome' style="text-decoration:none">HOME</a>
+<h3>APPS</h3>  
+<div>
+  {% for app in apps_list%}
+    <div><a href="/apppage/{{app[0]}}" style="text-decoration:none"><h3>{{app[1]}}: {{app[2]}}, {{app[3]}}, {{app[4]}}</h3></a></div>
+  {% endfor %}
+</div>
+{%endblock%}

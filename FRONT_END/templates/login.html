@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block head%} 
+    <title>LOGIN</title>
+{% endblock%}
+
+{% block body%}
+<div>
+    LOGIN
+    <form class="form" method="post" action="/login_result">
+        <input type="text" id="username" name="username" placeholder="Username"><br>
+        <input type="text" id="password" name="password" placeholder="Password"> <br>
+        <input type="radio" id="user" name="identity" value="user">
+        <label for="user">I'm User</label> 
+        <input type="radio" id="developer" name="identity" value="developer">
+        <label for="developer">I'm Developer</label><br><br>
+        <input type="submit" value="Submit"><br>
+    </form> 
+    Not a member? <a href='/signup'>Signup here</a>
+
+</div>
+{%endblock%}

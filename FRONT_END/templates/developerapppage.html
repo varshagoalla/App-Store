@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block head%} 
+<title>App</title>
+{% endblock%}
+
+{% block body%}
+<h3>{{name}}</h3>
+<h3><a href="/appusers/{{id}}" style="text-decoration:none">APP USERS</a></h3>
+<h3><a href="/delete/{{id}}" style="text-decoration:none">DELETE</a></h3>
+<form class="form" method="post" action="/add/{{id}}">
+<input type="text" id="username" name="username" placeholder="Write Co-developer Username"><br>
+<input type="submit" value="Submit"><br>
+</form>
+<p>
+    Rating: {{rating}}<br>
+    Category: {{category}}<br>
+    Genres: {{genres}}<br>
+    Number of installs: {{installs}}<br>
+    Age Limit: {{content_rating}}<br>
+    {% if free_paid=="Free" %}
+    It is free version. Price is 0.<br>
+    {% else %}
+    It is paid version. Price is {{price}}<br>
+    {% endif %}
+    Size: {{size}}<br>
+    Number of reviews: {{reviews}}<br>
+    Last Updated on {{last_updated}}<br>
+    Current Version is {{current_ver}}<br>
+    Android Version required is {{android_ver}}<br> 
+
+
+</p>
+<h3>REVIEWS</h3>
+<div>
+    {% for r in review%}
+    <div><h3>{{r[0]}}: {{r[1]}}</h3>
+    </div>
+    {% endfor %}
+  </div>
+{%endblock%}

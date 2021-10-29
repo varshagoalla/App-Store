@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block head%} 
+<title>Home</title>
+
+{% endblock%}
+
+{% block body%}
+<div>
+<a href='/developerprofile' style="text-decoration:none">PROFILE</a>
+<a href='/suggestions' style="text-decoration:none">SUGGESTIONS</a>
+<a href='/upload' style="text-decoration:none">  UPLOAD_APP</a>
+<a href='/logout' style="text-decoration:none">LOGOUT</a>
+</div>
+<h3>DEVELOPED APPS</h3>  
+<div>
+  {% for app in apps_list %}
+    <div><a href="/developerapppage/{{app[0]}}" style="text-decoration:none"><h3>{{app[1]}}</h3></a></div>
+  {% endfor %}
+</div>
+
+<script>
+</script>
+{%endblock%}

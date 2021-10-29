@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block head%} 
+<title>Home</title>
+
+{% endblock%}
+
+{% block body%}
+<a href='/profile' style="text-decoration:none">PROFILE</a>
+<a href='/filter' style="text-decoration:none">FILTERS</a>
+<a href='/usersuggestions' style="text-decoration:none">SUGGESTIONS</a>
+<a href='/logout' style="text-decoration:none">LOGOUT</a>
+<a href='/deleteaccount' style="text-decoration:none">DELETE</a>
+<br><br>
+<div>
+<form text-align="center" class='form' method="post" action="/search" text-align=:center>
+  <input type="text" id="search" name="search" placeholder=" Search App..Type Name">
+  <input type="submit" value="Enter">
+</form> 
+</div>
+<h3>APPS</h3>  
+<div>
+  {% for app in apps_list %}
+    <div><a href="/apppage/{{app[0]}}" style="text-decoration:none"><h3>{{app[1]}}</h3></a></div>
+  {% endfor %}
+</div>
+
+<script>
+</script>
+{%endblock%}

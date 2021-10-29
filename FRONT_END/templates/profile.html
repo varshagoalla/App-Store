@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block head%} 
+<title>Homes</title>
+{% endblock%}
+
+{% block body%}
+
+<div>
+  <h4>Username: {{input_uname}}</h4>
+  <h4>Name: {{input_name}}</h4>
+  <h4>EmailID: {{input_emailid}}</h4>
+  <h4><a href='/installed' style="text-decoration:none">Installed Apps</a></h4>
+  <h4><a href='/uninstalled' style="text-decoration:none">UnInstalled Apps</a></h4>
+  <h4><a href='/searchhistory' style="text-decoration:none">Search History</a></h4>
+  <h4><a href='/myreviews' style="text-decoration:none">My Reviews</a></h4>
+</div>
+
+
+
+<div>
+  
+  <form class="form" method="post" action='/editprofile'>
+    <input type="text" id="n_name" name="n_name" placeholder="New Name"><br>
+    <input type="text" id="n_emailid" name="n_emailid" placeholder="New Email Id. No spaces"><br>
+    <input type="text" id="n_username" name="n_username" placeholder="New Username. No spaces "><br>
+    <input type="text" id="n_password" name="n_password" placeholder="New Password. Atleast 10 characters "><br>
+    <input type="submit" value="Edit Profile">
+  </form>
+</div>
+{%endblock%}

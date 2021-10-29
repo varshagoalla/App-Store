@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block head%} 
+<title>App</title>
+{% endblock%}
+
+{% block body%}
+
+<h3>REVIEWS</h3>
+<div>
+    {% for r in review%}
+    <div><h4> {{r[0]}}: {{r[1]}}</h4>
+    </div>
+    {% endfor %}
+  </div>
+{%endblock%}

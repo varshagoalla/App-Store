@@ -1,0 +1,48 @@
+{%extends 'base.html'%}
+{%block head%} 
+<title>App</title>
+{% endblock%}
+
+{% block body%}
+<h3>{{name}}</h3>
+{% if installed==1 %}
+<h3><a href="/uninstall/{{id}}" style="text-decoration:none">UnInstall</a></h3>
+{% else %}
+<h3><a href="/install/{{id}}" style="text-decoration:none">Install</a></h3>
+{% endif %}
+<p>
+    Rating: {{rating}}<br>
+    Category: {{category}}<br>
+    Genres: {{genres}}<br>
+    Number of installs: {{installs}}<br>
+    Age Limit: {{content_rating}}<br>
+    {% if free_paid=="Free" %}
+    It is free version. Price is 0.<br>
+    {% else %}
+    It is paid version. Price is {{price}}<br>
+    {% endif %}
+    Size: {{size}}<br>
+    Number of reviews: {{reviews}}<br>
+    Last Updated on {{last_updated}}<br>
+    Current Version is {{current_ver}}<br>
+    Android Version required is {{android_ver}}<br> 
+
+
+</p>
+
+<h3>REVIEWS</h3>
+{% if check==1 %}
+<h3>Your review is there in following reviews!!</h3>
+{% elif installed==1 %}
+    <form class="form" method="post" action="/writereview/{{id}}">
+      <input type="text" id="review" name="review" placeholder="Write Review.">
+      <input type="submit" value="Save"><br>
+    </form>
+{% endif %}
+<div>
+    {% for r in review%}
+    <div><h4> {{r[0]}}: {{r[1]}}</h4>
+    </div>
+    {% endfor %}
+  </div>
+{%endblock%}

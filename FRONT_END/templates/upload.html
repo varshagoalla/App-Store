@@ -1,0 +1,108 @@
+{%extends 'base.html'%}
+{%block head%} 
+    <title>LOGIN</title>
+{% endblock%}
+
+{% block body%}
+
+<div>
+    
+    <form class="form" method="post" action="/upload_result">
+        <input type="text" id="app_name" name="app_name" placeholder="App Name"><br>
+        <input type="text" id="size" name="size" placeholder="Size"><br>
+        <input type="radio" id="free" name="f/p" value="Free">
+        <label for="free">Free</label> 
+        <input type="radio" id="paid" name="f/p" value="Paid">
+        <label for="paid">Paid</label><br>
+        <input type="text" id="price" name="price" placeholder="Price"><br>
+        <input type="text" id="genres" name="genres" placeholder="Genres"><br>
+        Select categories:<br>
+        <input type="radio" id="category1" name="category" value='ART_AND_DESIGN'>
+        <label for="category1">ART_AND_DESIGN   </label>
+        <input type="radio" id="category2" name="category" value='AUTO_AND_VEHICLES'>
+        <label for="category2">AUTO_AND_VEHICLES    </label>
+        <input type="radio" id="category3" name="category" value='BEAUTY'>
+        <label for="category3">BEAUTY   </label>
+        <input type="radio" id="category4" name="category" value='BOOKS_AND_REFERENCE'>
+        <label for="category4">BOOKS_AND_REFERENCE  </label>
+        <input type="radio" id="category5" name="category" value='BUSINESS'>
+        <label for="category5">BUSINESS </label> <br>
+        <input type="radio" id="category6" name="category" value='COMICS'>
+        <label for="category6">COMICS   </label>
+        <input type="radio" id="category7" name="category" value='COMMUNICATION'>
+        <label for="category7">COMMUNICATION    </label>
+        <input type="radio" id="category8" name="category" value='DATING'>
+        <label for="category8">DATING   </label>
+        <input type="radio" id="category9" name="category" value='EDUCATION'>
+        <label for="category9">EDUCATION    </label>
+        <input type="radio" id="category10" name="category" value='ENTERTAINMENT'>
+        <label for="category10">ENTERTAINMENT   </label><br>
+        <input type="radio" id="category11" name="category" value='EVENTS'>
+        <label for="category11">EVENTS  </label>
+        <input type="radio" id="category12" name="category" value='FAMILY'>
+        <label for="category12">FAMILY  </label>
+        <input type="radio" id="category13" name="category" value='FINANCE'>
+        <label for="category13">FINANCE </label>
+        <input type="radio" id="category14" name="category" value='FOOD_AND_DRINK'>
+        <label for="category14">FOOD_AND_DRINK  </label>
+        <input type="radio" id="category15" name="category" value='GAME'>
+        <label for="category15">GAME    </label><br>
+        <input type="radio" id="category16" name="category" value='HEALTH_AND_FITNESS'>
+        <label for="category16">HEALTH_AND_FITNESS  </label>
+        <input type="radio" id="category17" name="category" value='HOUSE_AND_HOME'>
+        <label for="category17">HOUSE_AND_HOME  </label>
+        <input type="radio" id="category18" name="category" value='LIBRARIES_AND_DEMO'>
+        <label for="category18">LIBRARIES_AND_DEMO  </label>
+        <input type="radio" id="category19" name="category" value='LIFESTYLE'>
+        <label for="category19">LIFESTYLE   </label>
+        <input type="radio" id="category20" name="category" value='MAPS_AND_NAVIGATION'>
+        <label for="category20">MAPS_AND_NAVIGATION </label><br>
+        <input type="radio" id="category21" name="category" value='MEDICAL'>
+        <label for="category21">MEDICAL </label>
+        <input type="radio" id="category22" name="category" value='NEWS_AND_MAGAZINES'>
+        <label for="category22">NEWS_AND_MAGAZINES  </label>
+        <input type="radio" id="category23" name="category" value='PARENTING'>
+        <label for="category23">PARENTING   </label>
+        <input type="radio" id="category24" name="category" value='PERSONALIZATION'>
+        <label for="category24">PERSONALIZATION </label>
+        <input type="radio" id="category25" name="category" value='PHOTOGRAPHY'>
+        <label for="category25">PHOTOGRAPHY </label><br>
+        <input type="radio" id="category26" name="category" value='PRODUCTIVITY'>
+        <label for="category26">PRODUCTIVITY    </label>
+        <input type="radio" id="category27" name="category" value='SHOPPING'>
+        <label for="category27">SHOPPING    </label>
+        <input type="radio" id="category28" name="category" value='SOCIAL'>
+        <label for="category28">SOCIAL  </label>
+        <input type="radio" id="category29" name="category" value='SPORTS'>
+        <label for="category29">SPORTS  </label>
+        <input type="radio" id="category30" name="category" value='TOOLS'>
+        <label for="category30">TOOLS   </label><br>
+        <input type="radio" id="category31" name="category" value='TRAVEL_AND_LOCAL'>
+        <label for="category31">TRAVEL_AND_LOCAL    </label>
+        <input type="radio" id="category32" name="category" value='VIDEO_PLAYERS'>
+        <label for="category32">VIDEO_PLAYERS   </label>
+        <input type="radio" id="category33" name="category" value='WEATHER'> 
+        <label for="category33">WEATHER </label>
+        <br>
+        <input type="text" id="last_updated" name="last_updated" placeholder="Write today's date,time"><br>
+        <input type="text" id="current_ver" name="current_ver" placeholder="Current Version"><br>
+        <input type="text" id="android_ver" name="android_ver" placeholder="Android Version"><br>
+        <input type="radio" id="1" name="cr" value=1>
+        <label for="1">Adults only 18+</label>
+        <input type="radio" id="2" name="cr" value=2>
+        <label for="2">Everyone</label>
+        <input type="radio" id="3" name="cr" value=3>
+        <label for="3">Everyone 10+</label>
+        <input type="radio" id="4" name="cr" value=4>
+        <label for="4">Mature 17+</label>
+        <input type="radio" id="5" name="cr" value=5>
+        <label for="5">Teen</label>
+        <input type="radio" id="6" name="cr" value=6>
+        <label for="6">Unrated</label><br>
+        <input type="submit" value="Upload"><br>
+        
+        </form> 
+
+
+</div>
+{%endblock%}

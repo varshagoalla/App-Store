@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block head%} 
+    <title>Signup</title>
+{% endblock%}
+
+{% block body%}
+<div>
+    <form class='form' method="post" action="/signup_result">
+        <input type="text" id="name" name="name" placeholder="Your Name"><br>
+        <input type="text" id="emailid" name="emailid" placeholder="Your Email Id. No Spaces"><br>
+        <input type="text" id="username" name="username" placeholder="Username. No Spaces"><br>
+        <input type="text" id="password" name="password" placeholder="Password. Atleast 10 characters"> <br><br>
+        <input type="submit" value="Submit">
+    </form> 
+</div>
+{%endblock%}
